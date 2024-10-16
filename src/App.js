@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import MainPage from './MainPage';
 import RoomPage from './RoomPage';
 import Login from './Login';
+import LandingPage from './LandingPage'; // Import LandingPage
 import choresData from './chores.json';
 import usersData from './users.json';
 import './App.css';
@@ -52,7 +53,7 @@ function App() {
               user ? <Navigate to="/" replace /> : <Login onLogin={handleLogin} />
             } />
             <Route path="/" element={
-              user ? <MainPage chores={chores} /> : <Navigate to="/login" replace />
+              user ? <MainPage chores={chores} /> : <LandingPage /> // Render LandingPage when not logged in
             } />
             <Route path="/room/:roomName" element={
               user ? <RoomPage chores={chores} user={user} toggleChore={toggleChore} /> : <Navigate to="/login" replace />

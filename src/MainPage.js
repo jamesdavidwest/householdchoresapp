@@ -1,26 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import AdminDashboard from './AdminDashboard';
+import UserDashboard from './UserDashboard'; // Assuming you have a UserDashboard component
 
-function MainPage({ chores }) {
-  const rooms = [...new Set(chores.map(chore => chore.room))];
+function MainPage() {
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is an admin (e.g., from local storage or API)
+    const isUserAdmin = localStorage.getItem('isAdmin');
+    if (isUserAdmin === 'true') {
+      setIsAdmin(true);
+    }
+  }, []);
 
   return (
-    <div className="main-page">
-      <h2>Rooms</h2>
-      <ul>
-        {rooms.map(room => (
-          <li key={room}>
-            <Link to={`/room/${room}`}>{room}</Link>
-            <ul>
-              {chores
-                .filter(chore => chore.room === room)
-                .map(chore => (
-                  <li key={chore.id}>{chore.assignedTo}</li>
-                ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+    <div>
+      {isAdmin ? <AdminDashboard /> : <UserDashboard />} 
     </div>
   );
 }
