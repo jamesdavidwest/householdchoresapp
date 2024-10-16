@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "name": "Wash dishes",
+      "frequency": "Daily",
+      "completed": false,
+      "room": "Kitchen",
+      "assignedTo": "sadie"
+    },
+    {
+      "id": 2,
+      "name": "Vacuum carpets",
+      "frequency": "Weekly",
+      "completed": false,
+      "room": "Living Room",
+      "assignedTo": "samantha"
+    },
+    {
+      "id": 3,
+      "name": "Take out trash",
+      "frequency": "As needed",
+      "completed": false,
+      "room": "Kitchen",
+      "assignedTo": "david"
+    },
+    {
+      "id": 4,
+      "name": "Clean bathroom",
+      "frequency": "Weekly",
+      "completed": false,
+      "room": "Bathroom",
+      "assignedTo": "sadie"
+    },
+    {
+      "id": 5,
+      "name": "Do laundry",
+      "frequency": "Weekly",
+      "completed": false,
+      "room": "Laundry Room",
+      "assignedTo": "samantha"
+    }
+  ]

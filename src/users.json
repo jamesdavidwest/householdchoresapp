@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Unk",
+		"role": "admin",
+		"username": "david"
+	},
+	{
+		"id": 2,
+		"name": "Sadie",
+		"role": "user",
+		"username": "sadie"
+	},
+	{
+		"id": 3,
+		"name": "Samantha",
+		"role": "user",
+		"username": "samantha"
+	},
+	{
+		"id": 4,
+		"name": "Angela",
+		"role": "admin",
+		"username": "angela"
+	},
+	{
+		"id": 5,
+		"name": "Popo",
+		"role": "admin",
+		"username": "dodie"
+	}
+]
